@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Masters — ChangeFlow</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="shell"></div>
+
+<template id="pageTemplate">
+  <div class="grid grid-4" style="margin-bottom:16px;">
+    <button class="btn btn-secondary tab-btn active" data-tab="platforms">Platforms</button>
+    <button class="btn btn-secondary tab-btn" data-tab="users">Users</button>
+    <button class="btn btn-secondary tab-btn" data-tab="categories">Categories</button>
+  </div>
+
+  <div id="tab-platforms" class="tab-panel">
+    <div class="card">
+      <div class="section-title">Add Platform</div>
+<form id="platformForm">
+
+    <div class="field-row">
+
+        <div class="field">
+            <label>Platform Name</label>
+            <input type="text" id="pfName" required />
+        </div>
+
+    </div>
+
+
+
+</form>
+      <button class="btn btn-primary btn-sm" id="pfSubmit">Add Platform</button>
+    </div>
+    <div class="card" id="platformsTableCard"></div>
+  </div>
+
+  <div id="tab-users" class="tab-panel" style="display:none;">
+    <div class="card">
+      <div class="section-title">Add User</div>
+      <div class="field-row">
+        <div class="field"><label>Name</label><input type="text" id="usName" /></div>
+        <div class="field"><label>Email</label><input type="email" id="usEmail" /></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Role</label><select id="usRole"></select></div>
+        <div class="field"><label>Platform</label><select id="usPlatform"><option value="">— None —</option></select></div>        
+      </div>
+
+      <div class="field-row">
+        <div class="field"><label>Business</label><select id="usBusiness"><option value="">— None —</option></select></div>
+        <div class="field"><label>Temporary Password</label><input type="text" id="usPassword" value="Passw0rd!" /></div>
+      </div>
+      
+      <button class="btn btn-primary btn-sm" id="usSubmit">Add User</button>
+    </div>
+    <div class="card" id="usersTableCard"></div>
+  </div>
+
+  <div id="tab-categories" class="tab-panel" style="display:none;">
+    <div class="card">
+      <div class="section-title">Add Category</div>
+      <div class="field-row">
+        <div class="field"><label>Category Name</label><input type="text" id="catName" /></div>
+        <div class="field"><label>Type</label>
+          <select id="catType"><option>Enhancement</option><option>Project</option></select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" id="catSubmit">Add Category</button>
+    </div>
+    <div class="card" id="categoriesTableCard"></div>
+  </div>
+
+</div>
+</template>
+
+<script src="js/api.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

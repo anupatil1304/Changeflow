@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reports — ChangeFlow</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="shell"></div>
+
+<template id="pageTemplate">
+  <div class="card">
+    <div class="filters">
+      <div class="field">
+        <label for="fPlatform">Platform</label>
+        <select id="fPlatform"><option value="">All</option></select>
+      </div>
+      <div class="field">
+        <label for="fStatus">Status</label>
+        <select id="fStatus">
+          <option value="">All</option>
+          <option>Pending Platform Approval</option>
+          <option>Pending PGC Approval</option>
+          <option>In Development</option>
+          <option>Testing/UAT</option>
+          <option>Production</option>
+          <option>Closed</option>
+          <option>Rejected</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fPriority">Priority</label>
+        <select id="fPriority">
+          <option value="">All</option>
+          <option>Low</option><option>Medium</option><option>High</option><option>Critical</option>
+        </select>
+      </div>
+      <div class="field"><label for="fFrom">From</label><input type="date" id="fFrom" /></div>
+      <div class="field"><label for="fTo">To</label><input type="date" id="fTo" /></div>
+      <button class="btn btn-primary" id="applyBtn">Apply Filters</button>
+      <button class="btn btn-secondary" id="exportExcelBtn">Export Excel</button>
+      <button class="btn btn-secondary" id="exportPdfBtn">Export PDF</button>
+    </div>
+    <div id="tableWrap"></div>
+  </div>
+</template>
+
+<script src="js/api.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/reports.js"></script>
+</body>
+</html>

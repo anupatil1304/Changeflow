@@ -1,0 +1,12 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Cors==4.0.1
+PyJWT==2.9.0
+Werkzeug==3.0.3
+python-dotenv==1.0.1
+openpyxl==3.1.5
+reportlab==4.2.5
+
+# Uncomment to connect to SQL Server (requires the ODBC Driver 17/18 for SQL Server
+# installed on the host OS - https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server)
+# pyodbc==5.1.0

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Requests — ChangeFlow</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="shell"></div>
+
+<template id="pageTemplate">
+  <div class="card">
+    <div class="filters">
+      <div class="field">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search description…" />
+      </div>
+      <div class="field">
+        <label for="statusFilter">Status</label>
+        <select id="statusFilter">
+          <option value="">All statuses</option>
+          <option>Pending Platform Approval</option>
+          <option>Pending PGC Approval</option>
+          <option>In Development</option>
+          <option>Testing/UAT</option>
+          <option>Production</option>
+          <option>Closed</option>
+          <option>Rejected</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary" id="clearBtn">Clear</button>
+    </div>
+    <div id="tableWrap"></div>
+  </div>
+</template>
+
+<script src="js/api.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/request-modal.js"></script>
+<script src="js/my-requests.js"></script>
+</body>
+</html>
